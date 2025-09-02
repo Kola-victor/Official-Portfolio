@@ -41,7 +41,7 @@ const Navbar = () => {
               <div className="flex justify-between items-center px-10 py-4">
                 <div className="flex-shrink-0 mr-16">
                   <img
-                    src="public/Photo/S.JPG"
+                    src="/Photo/S.JPG"
                     alt="Logo"
                     className="h-12 w-auto object-contain"
                   />
