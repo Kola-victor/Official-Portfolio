@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Navbar from './Navbar'; // Import the Navbar component
+import{ useState } from 'react';
+import Navbar from './Navbar'; 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -8,16 +8,15 @@ const Contact = () => {
     message: ''
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: { target: { name: any; value: any; }; }) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-    // Here you would typically send the form data to a server
     console.log('Form submitted:', formData);
     alert('Thank you for your message! I will get back to you soon.');
     setFormData({
@@ -123,7 +122,7 @@ const Contact = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  rows="5"
+                  rows={5}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
                   required
                 ></textarea>

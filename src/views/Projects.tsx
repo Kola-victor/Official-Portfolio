@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Navbar from './Navbar'; // Import the Navbar component
+import{ useState } from 'react';
+import Navbar from './Navbar'; 
 
 type Project = {
   id: number;
@@ -9,7 +9,7 @@ type Project = {
   features: string[];
   status: string;
   github: string;
-  liveDemo?: string; // Optional field for live demo
+  liveDemo?: string; 
   images: string[];
 };
 
@@ -26,7 +26,6 @@ const Projects = () => {
       status: 'Development completed, deployed',
       github: 'https://github.com/Kola-victor/Product-Cart-Project-',
       liveDemo: 'https://dessertly.netlify.app/', 
-      images: ['/images/dessert-app-1.jpg', '/images/dessert-app-2.jpg']
     },
     {
       id: 2,
@@ -36,8 +35,7 @@ const Projects = () => {
       features: ['QR code generation', 'PDF export', 'Ticket validation', 'Admin panel'],
       status: 'Development completed, deployed',
       github: 'https://github.com/Kola-victor/Kola-victor-Conference-ticket-generator/tree/main',
-      liveDemo: 'https://conference-ticket-form.netlify.app/', // Add your live demo URL here
-      images: ['/images/ticket-app-1.jpg', '/images/ticket-app-2.jpg']
+      liveDemo: 'https://conference-ticket-form.netlify.app/', 
     },
     {
       id: 3,
@@ -47,8 +45,8 @@ const Projects = () => {
       features: ['Multi-step navigation', 'Form validation', 'Progress indicator', 'Data persistence'],
       status: 'Development completed, deployed',
       github: 'https://github.com/Kola-victor/Kola-victor-Conference-ticket-generator/tree/main',
-      liveDemo: 'https://reactformstep.netlify.app', // Add your live demo URL here
-      images: ['/images/ticket-app-1.jpg', '/images/ticket-app-2.jpg']
+      liveDemo: 'https://reactformstep.netlify.app', 
+
     },
      {
       id: 4,
@@ -58,8 +56,8 @@ const Projects = () => {
       features: ['Basic operations', 'Responsive design', 'Keyboard support', 'Error handling'],
       status: 'Development completed, deployed',
       github: 'https://github.com/Kola-victor/Basic-Calculator-',
-      liveDemo: 'https://fundamentalcalculator.netlify.app', // Add your live demo URL here
-      images: ['/images/ticket-app-1.jpg', '/images/ticket-app-2.jpg']
+      liveDemo: 'https://fundamentalcalculator.netlify.app', 
+      
     }
     
   ];
@@ -117,7 +115,6 @@ const Projects = () => {
                     View Code
                   </a>
                   
-                  {/* Live Demo Button for hosted projects */}
                   {project.liveDemo && (
                     <a 
                       href={project.liveDemo} 
@@ -147,7 +144,7 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* Info Box */}
+        
         <div className="mt-16 bg-white/90 rounded-xl p-8 max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-blue-900 mb-4">About Project Deployment</h2>
           <p className="text-gray-700 mb-4">
@@ -161,7 +158,7 @@ const Projects = () => {
         </div>
       </div>
 
-      {/* Project Detail Modal */}
+    
       {selectedProject && (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
@@ -215,7 +212,7 @@ const Projects = () => {
                   View on GitHub
                 </a>
                 
-                {/* Live Demo Button in Modal */}
+                
                 {selectedProject.liveDemo && (
                   <a 
                     href={selectedProject.liveDemo} 

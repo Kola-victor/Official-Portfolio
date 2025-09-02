@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import{ useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
@@ -9,14 +9,11 @@ const Navbar = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
-  // Scroll behavior
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > lastScrollY) {
-        // scrolling down → hide navbar
         setShowNavbar(false);
       } else {
-        // scrolling up → show navbar
         setShowNavbar(true);
       }
       setLastScrollY(window.scrollY);
@@ -36,24 +33,19 @@ const Navbar = () => {
       >
         <div className="container mx-auto px-6">
           <div className="relative">
-            {/* Glow effect wrapper */}
             <div className="absolute -inset-5 rounded-full -z-10">
               <div className="absolute inset-0 bg-white/40 blur-3xl rounded-full"></div>
               <div className="absolute inset-0 bg-blue-200/40 blur-2xl rounded-full"></div>
             </div>
-
-            {/* Main nav container */}
             <div className="bg-white/95 backdrop-blur-md rounded-full shadow-lg border border-blue-100/50 mx-auto max-w-4xl relative transition-all duration-300 hover:shadow-blue-200/70">
               <div className="flex justify-between items-center px-10 py-4">
                 <div className="flex-shrink-0 mr-16">
-  <img
-    src="public/Photo/S.JPG"
-    alt="Logo"
-    className="h-12 w-auto object-contain"
-  />
-</div>
-
-                {/* Desktop Navigation */}
+                  <img
+                    src="public/Photo/S.JPG"
+                    alt="Logo"
+                    className="h-12 w-auto object-contain"
+                  />
+                </div>
                 <div className="hidden md:flex space-x-3 flex-grow justify-end mr-8">
                   {["/", "/projects", "/about", "/contact"].map((path) => (
                     <Link
@@ -71,8 +63,6 @@ const Navbar = () => {
                     </Link>
                   ))}
                 </div>
-
-                {/* CTA Button - Desktop */}
                 <div className="hidden md:block flex-shrink-0">
                   <Link
                     to="/hire"
@@ -81,8 +71,6 @@ const Navbar = () => {
                     Hire Me
                   </Link>
                 </div>
-
-                {/* Mobile menu button */}
                 <button
                   className="md:hidden p-2 rounded-full hover:bg-blue-50 transition-all duration-300"
                   onClick={() => setIsMobileMenuOpen(true)}
@@ -107,15 +95,12 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-
-      {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-50 md:hidden">
           <div
             className="absolute inset-0 bg-black/20 backdrop-blur-sm"
             onClick={() => setIsMobileMenuOpen(false)}
           ></div>
-
           <div className="absolute right-0 top-0 h-full w-80 bg-white/95 backdrop-blur-md border-l border-blue-100/50 shadow-xl p-6">
             <button
               className="absolute top-6 right-6 p-2 rounded-full hover:bg-blue-50 transition-all duration-300"
@@ -136,7 +121,6 @@ const Navbar = () => {
                 ></path>
               </svg>
             </button>
-
             <div className="mt-16">
               <div className="flex flex-col space-y-4">
                 {["/", "/projects", "/about", "/contact"].map((path) => (

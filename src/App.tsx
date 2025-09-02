@@ -1,5 +1,5 @@
 // App.tsx (or your main router file)
-import React from 'react';
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './views/Home';
 import Projects from './views/Projects';

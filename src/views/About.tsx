@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import{ useEffect, useRef } from 'react';
 import Navbar from './Navbar';
 
 const About = () => {
@@ -11,7 +11,7 @@ const About = () => {
       rootMargin: '0px 0px -50px 0px'
     };
 
-    const observerCallback = (entries, observer) => {
+    const observerCallback: IntersectionObserverCallback = (entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('animate-fade-in');
@@ -22,7 +22,7 @@ const About = () => {
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-    // Observe all skill and journey items
+    
     document.querySelectorAll('.skill-card, .timeline-item').forEach(item => {
       observer.observe(item);
     });
@@ -121,7 +121,7 @@ const About = () => {
             <h2 className="text-2xl font-bold text-blue-900 mb-8 text-center">My Journey</h2>
             
             <div className="space-y-12 relative" ref={journeyRef}>
-              {/* Vertical timeline line */}
+              
               <div className="absolute left-6 top-0 bottom-0 w-1 bg-blue-200 ml-1"></div>
               
               <div className="timeline-item opacity-0 translate-x-10 transition-all duration-700 relative pl-16">
@@ -164,7 +164,7 @@ const About = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes fadeIn {
           from {
             opacity: 0;

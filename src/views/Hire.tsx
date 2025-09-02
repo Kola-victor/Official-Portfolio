@@ -1,4 +1,3 @@
-// views/Hire.tsx
 import React, { useState, useEffect, useRef } from 'react';
 import Navbar from './Navbar';
 
@@ -28,7 +27,7 @@ const Hire = () => {
                 newState[index] = true;
                 return newState;
               });
-            }, index * 300); // Stagger the animation
+            }, index * 300); 
           }
         });
       },
@@ -139,7 +138,7 @@ const Hire = () => {
           ) : (
             <div className="bg-white rounded-xl shadow-md p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Form fields remain the same */}
+               
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
@@ -278,7 +277,6 @@ const Hire = () => {
             </div>
           )}
 
-          {/* Additional Info Section */}
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div 
               ref={gridRefs[0]}
