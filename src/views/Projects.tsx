@@ -10,7 +10,6 @@ type Project = {
   status: string;
   github: string;
   liveDemo?: string; 
-  images: string[];
 };
 
 const Projects = () => {
@@ -26,6 +25,7 @@ const Projects = () => {
       status: 'Development completed, deployed',
       github: 'https://github.com/Kola-victor/Product-Cart-Project-',
       liveDemo: 'https://dessertly.netlify.app/', 
+      
     },
     {
       id: 2,
@@ -71,7 +71,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[url('/images/3d-background-with-white-cubes.jpg')] bg-cover bg-center pt-24 font-sans">
+    <div className="min-h-screen bg-cover bg-center pt-24 font-sans">
      
       <Navbar />
       
