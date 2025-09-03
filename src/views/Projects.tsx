@@ -148,13 +148,10 @@ const Projects = () => {
         <div className="mt-16 bg-white/90 rounded-xl p-8 max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-blue-900 mb-4">About Project Deployment</h2>
           <p className="text-gray-700 mb-4">
-            Some of these projects are deployed and available for live demonstration, while others are completed 
-            and fully functional but not currently deployed to live servers. You can explore the codebase on GitHub 
-            to see the implementation details, architecture, and coding practices.
+            All of these projects have been successfully deployed and are available for live demonstration. You can also explore the full codebase on GitHub to review the implementation details, architecture, and coding practices.
           </p>
           <p className="text-gray-700">
-            I can deploy any of these projects upon request for demonstration purposes. Please feel free to contact me if you'd like to see a live demo of any specific project.
-          </p>
+These live deployments stand as evidence of both functionality and scalability, ensuring that the applications can be accessed and tested in real-world conditions.          </p>
         </div>
       </div>
 
