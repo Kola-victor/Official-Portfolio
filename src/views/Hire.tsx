@@ -188,44 +188,63 @@ const Hire = () => {
                   />
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="projectType" className="block text-gray-700 font-medium mb-2">
-                      Project Type *
-                    </label>
-                    <select
-                      id="projectType"
-                      name="projectType"
-                      value={formData.projectType}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
-                    >
-                      <option value="">Select project type</option>
-                      {projectTypes.map((type) => (
-                        <option key={type} value={type}>{type}</option>
-                      ))}
-                    </select>
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="budget" className="block text-gray-700 font-medium mb-2">
-                      Estimated Budget
-                    </label>
-                    <select
-                      id="budget"
-                      name="budget"
-                      value={formData.budget}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
-                    >
-                      <option value="">Select budget range</option>
-                      {budgetRanges.map((range) => (
-                        <option key={range} value={range}>{range}</option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
+               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+  <div>
+    <label htmlFor="projectType" className="block text-gray-700 font-medium mb-2">
+      Project Type *
+    </label>
+    <select
+      id="projectType"
+      name="projectType"
+      value={formData.projectType}
+      onChange={handleChange}
+      required
+      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+    >
+      <option value="">Select project type</option>
+      {projectTypes.map((type) => (
+        <option key={type} value={type}>{type}</option>
+      ))}
+    </select>
+  </div>
+
+  <div>
+    <label htmlFor="budget" className="block text-gray-700 font-medium mb-2">
+      Estimated Budget
+    </label>
+    <select
+      id="budget"
+      name="budget"
+      value={formData.budget}
+      onChange={handleChange}
+      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+    >
+      <option value="">Select budget range</option>
+      {budgetRanges.map((range) => (
+        <option key={range} value={range}>{range}</option>
+      ))}
+    </select>
+  </div>
+
+  <div>
+    <label htmlFor="timeline" className="block text-gray-700 font-medium mb-2">
+      Project Timeline
+    </label>
+    <select
+      id="timeline"
+      name="timeline"
+      value={formData.timeline}
+      onChange={handleChange}
+      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+    >
+      <option value="">Select timeline</option>
+      {timelines.map((time) => (
+        <option key={time} value={time}>{time}</option>
+      ))}
+    </select>
+  </div>
+</div>
+
 
                 <div>
                   <label htmlFor="timeline" className="block text-gray-700 font-medium mb-2">
